@@ -2,6 +2,7 @@
 
 **WanderLust** is a full-stack travel web application built using **Node.js**, **Express**, and **EJS**.  
 It allows users to explore, add, and manage travel listings with dynamic views and clean UI.
+User can Ask suggestions from  AI to plan a trip or other related queries.
 
 ### 🚀 Live Demo  
 🔗 [WanderLust on Render](https://wanderlust-2pwk.onrender.com)
