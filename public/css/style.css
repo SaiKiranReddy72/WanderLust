@@ -169,3 +169,54 @@ width:80vh;
   padding: 0.8rem 1rem !important; 
   margin-top: auto;                
 } */
+
+
+
+#aiAssistant {
+  margin: 20px;
+ 
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+}
+#aiAssistant input {
+  width: 80%;
+  padding: 8px;
+}
+
+
+/* ================= AI ASSISTANT BOX ================= */
+
+/* AI Box styling */
+.ai-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+ flex: 1;
+ min-width: 280px;
+}
+
+.ai-box input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.ai-box button {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+#aiResult {
+  display: none; /* hide initially */
+}
+
+#aiResult {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+}

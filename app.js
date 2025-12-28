@@ -5,6 +5,9 @@ if(process.env.NODE_ENV != "production"){
 
 const express = require("express");
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const mongoose = require("mongoose");
 //const Listing = require("./models/listing.js");
 const path = require("path");
@@ -24,6 +27,7 @@ const User =require("./models/user.js");
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const aiRoute = require('./routes/ai');
 
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
@@ -48,11 +52,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
+app.use('/ai', aiRoute);
 
 
-app.get("/", (req, res) => {
-  res.send("Hi, I am root");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hi, I am root");
+// });
 
 const store =MongoStore.create({
   mongoUrl:dbUrl,
@@ -92,7 +97,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next) =>{
   res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
-    res.locals.currUser = req.user;
+    res.locals.currUser = req.user ;
   next();
 });
 

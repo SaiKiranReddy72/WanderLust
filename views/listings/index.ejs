@@ -68,6 +68,31 @@
            <p> Amazing pools</p> 
           </div>
 
+
+          
+<div id="aiAssistant" class="ai-box">
+  <h4>Ask AI to suggest a vaction</h4>
+  <input type="text" id="aiInput" placeholder="Tell me your query">
+  <button onclick="askAI()">Ask</button>
+  <div id="aiResult"></div>
+</div>
+
+<script>
+  async function askAI() {
+    const prompt = document.getElementById("aiInput").value;
+    const res = await fetch("/ai/travel", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt })
+    });
+    const data = await res.json();
+    document.getElementById("aiResult").innerText = data.reply;
+  }
+</script>
+
+
+
+
           <div class="tax-toggle">
           <div class="form-check-reverse form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
