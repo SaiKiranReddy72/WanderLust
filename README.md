@@ -6,6 +6,8 @@ It allows users to explore, add, and manage travel listings with dynamic views a
 ### 🚀 Live Demo  
 🔗 [WanderLust on Render](https://wanderlust-2pwk.onrender.com)
 
+![image alt](https://github.com/SaiKiranReddy72/WanderLust/blob/21dabd2b61c4244f7013ebc5627dd01802570fef/Wanderlust.jpeg)
+
 ### 🧩 Tech Stack
 - Node.js, Express.js, MongoDB  
 - EJS templates for server-side rendering  
